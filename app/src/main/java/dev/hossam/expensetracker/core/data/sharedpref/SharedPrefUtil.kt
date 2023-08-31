@@ -1,4 +1,4 @@
-package dev.hossam.expensetracker.core.data.local.sharedpref
+package dev.hossam.expensetracker.core.data.sharedpref
 
 import android.app.Application
 import android.content.Context
@@ -13,7 +13,7 @@ object SharedPrefUtil {
 
 
     fun init(appContext: Application) {
-        this.appContext = appContext
+        SharedPrefUtil.appContext = appContext
         sharedPreferences = appContext.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
     }
 

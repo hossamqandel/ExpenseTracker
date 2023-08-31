@@ -1,10 +1,7 @@
 package dev.hossam.expensetracker
 
 import android.app.Application
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
-import dev.hossam.expensetracker.core.data.local.sharedpref.SharedPrefUtil
+import dev.hossam.expensetracker.core.data.sharedpref.SharedPrefUtil
 
 class BaseApplication : Application() {
 
