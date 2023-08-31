@@ -1,3 +1,36 @@
 <resources>
-    <string name="app_name">ExpenseTracker</string>
+    <string name="app_name">Expense Tracker</string>
+
+    <string name="total_balance">إجمالي الرصيد</string>
+    <string name="total_income">إجمالي الدخل</string>
+    <string name="total_expense">إجمالي النفقات</string>
+
+    <string name="dashboard">لوحة التحكم</string>
+    <string name="all_income">كل الدخل</string>
+    <string name="all_expense">كل النفقات</string>
+    <string name="details">التفاصيل</string>
+    <string name="recent_transaction">المعاملات الأخيرة</string>
+    <string name="add_transaction">أضف معاملة</string>
+
+    <string name="title">عنوان</string>
+    <string name="amount">مبلغ</string>
+    <string name="transaction_type">نوع المعاملة</string>
+    <string name="category">فئة</string>
+    <string name="date">الوقت</string>
+    <string name="note">ملحوظة</string>
+
+    <string name="income">دخل</string>
+    <string name="expense">نفقة</string>
+
+    <string name="housing">السكن</string>
+    <string name="transportation">مواصلات</string>
+    <string name="food">طعام</string>
+    <string name="utilities">خدمات</string>
+    <string name="insurance">تأمين</string>
+    <string name="healthcare">الرعاية الصحية</string>
+    <string name="saving_debts">التوفير والديون</string>
+    <string name="personal_spending">الإنفاق الشخصي</string>
+    <string name="entertainment">ترفيه</string>
+    <string name="miscellaneous">متنوع</string>
+    <string name="gym">نادي رياضي</string>
 </resources>
