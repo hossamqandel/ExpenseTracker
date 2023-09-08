@@ -3,12 +3,11 @@ package dev.hossam.expensetracker.core.enums
 import java.util.Arrays
 import java.util.stream.Collectors
 
-enum class CategoryEnum(private val value: String) {
+enum class CategoryEnum(val value: String) {
 
     HOUSING("Housing"),
     TRANSPORTATION("Transportation"),
     FOOD("Food"),
-    GYM("Gym"),
     UTILITIES("Utilities"),
     INSURANCE("Insurance"),
     HEALTHCARE("Healthcare"),
