@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_14sdp"
+    android:orientation="vertical"
+    tools:context=".feature_detail.presentation.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_BtnDetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon_tint"/>
+
+        <TextView
+            android:id="@+id/screen_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/details"
+            android:textColor="@color/text_subject_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_ShareTrans"
+            app:layout_constraintStart_toEndOf="@+id/iv_BtnDetailBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_DeleteTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/trash"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_ShareTrans"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon_tint" />
+
+        <ImageView
+            android:id="@+id/btn_ShareTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon_tint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/tv_transactionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/template_subject_with_value"
+        android:layout_marginTop="@dimen/_16sdp"
+        />
+
+    <include
+        android:id="@+id/tv_TransAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/template_subject_with_value"
+        />
+
+    <include
+        android:id="@+id/tv_TransType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/template_subject_with_value"
+        />
+
+    <include
+        android:id="@+id/tv_TransCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/template_subject_with_value"
+        />
+
+    <include
+        android:id="@+id/tv_TransDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/template_subject_with_value"
+        />
+
+    <include
+        android:id="@+id/tv_TransNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/template_subject_with_value"
+        />
+
+
+
+</LinearLayout>

@@ -13,5 +13,6 @@
     <color name="floating_button">#0069f6</color>
     <color name="icon_tint">#3c3c3c</color>
     <color name="text_subject">#919191</color>
+    <color name="text_subject_value">#FF000000</color>
 
 </resources>

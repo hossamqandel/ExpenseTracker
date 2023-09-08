@@ -1,8 +1,8 @@
 package dev.hossam.expensetracker.core.core_actions
 
-import dev.hossam.expensetracker.core.enums.TransactionTypeEnum
+import kotlinx.coroutines.flow.Flow
 
 interface TransactionRetriever {
 
-    fun getAllTransactionsByType(type: TransactionTypeEnum): List<Unit>
+    fun getAllTransactionsByType(type: String): Flow<List<Unit>>
 }
