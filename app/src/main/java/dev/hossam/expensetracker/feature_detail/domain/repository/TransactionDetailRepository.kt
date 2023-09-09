@@ -1,7 +1,10 @@
 package dev.hossam.expensetracker.feature_detail.domain.repository
 
-interface TransactionDetailRepository {
+import dev.hossam.expensetracker.core.core_actions.TransactionDeleter
+
+interface TransactionDetailRepository : TransactionDeleter {
 
     suspend fun getTransactionDetail(id: Int): Any?
-    suspend fun deleteTransaction(id: Int)
+    override suspend fun deleteTransactionById(id: Int)
+
 }

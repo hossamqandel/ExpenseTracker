@@ -1,14 +1,13 @@
 package dev.hossam.expensetracker.feature_detail.data.local
 
 import androidx.room.Dao
+import androidx.room.Query
 import dev.hossam.expensetracker.core.core_actions.TransactionDeleter
+import dev.hossam.expensetracker.core.data.room.entities.TransactionEntity
 
 @Dao
-interface TransactionDetailDao : TransactionDeleter {
+interface TransactionDetailDao {
 
-//    @Query("SELECT FROM TABLE WHERE id = :id")
-    suspend fun getTransactionDetailById(id: Int): Any? //Temporary return
-
-//    @Query("DELETE FROM Table WHERE id = :id")
-    override suspend fun deleteTransactionById(id: Int)
+    @Query("SELECT * FROM TransactionEntity WHERE id = :id")
+    suspend fun getTransactionDetailById(id: Int): TransactionEntity?
 }
