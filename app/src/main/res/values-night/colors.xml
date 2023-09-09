@@ -7,7 +7,7 @@
     <color name="text_balance">#FFFFFFFF</color>
     <color name="text_income">#6ccd95</color>
     <color name="text_expense">#e15254</color>
-    <color name="floating_button">#4b99fe</color>
+    <color name="button">#4b99fe</color>
     <color name="icon_tint">#fefefe</color>
     <color name="text_subject">#b7b7b7</color>
     <color name="text_subject_value">#FFFFFFFF</color>

@@ -9,6 +9,7 @@ import dagger.hilt.components.SingletonComponent
 import dev.hossam.expensetracker.BaseApplication
 import dev.hossam.expensetracker.core.data.room.DatabaseUtil
 import dev.hossam.expensetracker.core.data.room.ExpenseTrackerDatabase
+import dev.hossam.expensetracker.feature_add_transaction.data.local.AddTransactionDao
 import dev.hossam.expensetracker.feature_detail.data.local.TransactionDetailDao
 import javax.inject.Singleton
 
@@ -35,4 +36,13 @@ object DatabaseModule {
     ): TransactionDetailDao {
         return database.transactionDetailDao()
     }
+
+    @Provides
+    @Singleton
+    fun provideAddTransactionDao(
+        database: ExpenseTrackerDatabase
+    ): AddTransactionDao {
+        return database.addTransactionDao()
+    }
+
 }

@@ -33,5 +33,6 @@
     <string name="personal_spending">الإنفاق الشخصي</string>
     <string name="entertainment">ترفيه</string>
     <string name="miscellaneous">متنوع</string>
+    <string name="navigate_back">الرجوع للصفحه السابقه</string>
 
 </resources>

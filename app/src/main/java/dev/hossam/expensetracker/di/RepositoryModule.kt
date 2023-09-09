@@ -4,6 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.scopes.ViewModelScoped
+import dev.hossam.expensetracker.feature_add_transaction.data.repository.AddTransactionRepositoryImpl
+import dev.hossam.expensetracker.feature_add_transaction.domain.repository.AddTransactionRepository
 import dev.hossam.expensetracker.feature_detail.data.repository.TransactionDetailRepositoryImpl
 import dev.hossam.expensetracker.feature_detail.domain.repository.TransactionDetailRepository
 
@@ -16,5 +18,11 @@ abstract class RepositoryModule {
     abstract fun bindTransactionDetailRepo(
         repo: TransactionDetailRepositoryImpl
     ): TransactionDetailRepository
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindAddTransactionRepo(
+        repo: AddTransactionRepositoryImpl
+    ): AddTransactionRepository
 
 }
