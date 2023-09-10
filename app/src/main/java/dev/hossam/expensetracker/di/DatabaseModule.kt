@@ -1,5 +1,6 @@
 package dev.hossam.expensetracker.di
 
+import android.content.Context
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
@@ -21,7 +22,7 @@ object DatabaseModule {
     @Provides
     @Singleton
     fun provideDatabase(
-        @ApplicationContext context: BaseApplication
+        @ApplicationContext context: Context
     ): ExpenseTrackerDatabase {
         return Room.databaseBuilder(
             context = context,

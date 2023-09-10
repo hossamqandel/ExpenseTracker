@@ -4,7 +4,7 @@ import java.util.Arrays
 import java.util.stream.Collectors
 
 
-enum class TransactionTypeEnum(private val value: String) {
+enum class TransactionTypeEnum(val value: String) {
 
     INCOME("Income"),
     EXPENSE("Expense");

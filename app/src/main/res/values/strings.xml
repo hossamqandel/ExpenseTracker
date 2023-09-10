@@ -36,4 +36,6 @@
     <string name="entertainment">Entertainment</string>
     <string name="miscellaneous">Miscellaneous</string>
     <string name="navigate_back">Navigate Back</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
 </resources>

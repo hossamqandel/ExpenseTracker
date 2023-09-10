@@ -2,8 +2,11 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
+    id("kotlin-kapt")
     id("androidx.navigation.safeargs")
     id("com.google.dagger.hilt.android")
+    id("dagger.hilt.android.plugin")
+
 
 }
 
@@ -38,6 +41,10 @@ android {
         jvmTarget = "17"
     }
 
+    buildFeatures{
+        viewBinding = true
+    }
+
 }
 
 dependencies {
@@ -62,9 +69,9 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
-    val hiltVersion = "2.44"
+    val hiltVersion = "2.48"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
-    ksp("com.google.dagger:hilt-android-compiler:$hiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
 
     val lifecycleVersion = "2.6.1"
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
@@ -75,7 +82,7 @@ dependencies {
     implementation("com.intuit.ssp:ssp-android:$intuitVersion")
     implementation("com.intuit.sdp:sdp-android:$intuitVersion")
 
-    val coroutinesVersion = "1.1.0"
+    val coroutinesVersion = "1.7.3"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
 }
