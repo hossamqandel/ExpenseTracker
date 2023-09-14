@@ -47,65 +47,113 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/icon_tint" />
 
-
     <include
         android:id="@+id/layoutMemberTitle"
         layout="@layout/template_subject_with_value"
-        android:layout_width="0dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_14sdp"
-        app:layout_constraintBottom_toTopOf="@+id/layoutMemberAmount"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMemberAmount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_BtnDetailBack" />
 
     <include
         android:id="@+id/layoutMemberAmount"
         layout="@layout/template_subject_with_value"
-        android:layout_width="0dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/layoutMemberType"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Subject_TransType"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutMemberTitle" />
 
-    <include
-        android:id="@+id/layoutMemberType"
-        layout="@layout/template_subject_with_value"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/tv_Subject_TransType"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/transaction_type"
+        android:textColor="@color/text_subject"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toTopOf="@+id/layoutMemberCategory"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutMemberAmount" />
 
-    <include
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutMemberCategory"
-        layout="@layout/template_subject_with_value"
-        android:layout_width="0dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/layoutMemberDate"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Subject_TransCategory"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutMemberType" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Subject_TransType">
+
+        <AutoCompleteTextView
+            android:id="@+id/transaction_TypeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="@string/income"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_Subject_TransCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/category"
+        android:textColor="@color/text_subject"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMemberType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMemberCategory" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutMemberType"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMemberDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Subject_TransCategory">
+        <AutoCompleteTextView
+            android:id="@+id/transaction_CategoryMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="@string/housing"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <include
         android:id="@+id/layoutMemberDate"
         layout="@layout/template_subject_with_value"
-        android:layout_width="0dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/layoutMemberNote"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMemberNote"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutMemberCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/layoutMemberType" />
 
     <include
         android:id="@+id/layoutMemberNote"
         layout="@layout/template_subject_with_value"
-        android:layout_width="0dp"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btn_ChangeViewMode"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ChangeViewMode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutMemberDate" />
 
@@ -113,7 +161,7 @@
         android:id="@+id/btn_ChangeViewMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/edit"
+        android:text="@string/save"
         android:textSize="@dimen/_14ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

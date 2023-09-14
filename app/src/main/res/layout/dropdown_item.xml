@@ -1,0 +1,11 @@
+
+<TextView
+    android:id="@+id/menuItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/_14ssp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:text="Value"
+    android:padding="@dimen/_14sdp"
+    />

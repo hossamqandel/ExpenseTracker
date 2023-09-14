@@ -38,4 +38,23 @@
     <string name="navigate_back">Navigate Back</string>
     <string name="edit">Edit</string>
     <string name="save">Save</string>
+
+    <string-array name="transaction_types">
+        <item>Income</item>
+        <item>Expense</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Housing</item>
+        <item>Transportation</item>
+        <item>Food</item>
+        <item>Utilities</item>
+        <item>Insurance</item>
+        <item>Healthcare</item>
+        <item>Saving &amp; Debts</item>
+        <item>Personal Spending</item>
+        <item>Entertainment</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
 </resources>
