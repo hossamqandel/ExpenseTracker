@@ -16,6 +16,7 @@ import com.google.android.material.timepicker.TimeFormat
 import dagger.hilt.android.AndroidEntryPoint
 import dev.hossam.expensetracker.R
 import dev.hossam.expensetracker.databinding.FragmentDetailBinding
+import dev.hossam.expensetracker.feature_add_transaction.presentation.AddEditTransactionViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
@@ -120,8 +121,8 @@ class DetailFragment : Fragment() {
     }
 
     private fun sendLatestValues() {
-        addEditTransactionViewModel.validateFields(FormEvent.Title(titleValue.text.toString()))
-        addEditTransactionViewModel.validateFields(FormEvent.Amount(amountValue.text.toString()))
+        addEditTransactionViewModel.onEvent(FormEvent.Title(titleValue.text.toString()))
+        addEditTransactionViewModel.onEvent(FormEvent.Amount(amountValue.text.toString()))
 
     }
 

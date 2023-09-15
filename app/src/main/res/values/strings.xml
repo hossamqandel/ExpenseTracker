@@ -39,6 +39,19 @@
     <string name="edit">Edit</string>
     <string name="save">Save</string>
 
+    <string name="set_time">Set Time</string>
+
+    <string name="transaction_has_been_added_successfully">Transaction has been added successfully</string>
+
+<!--  Validation error messages  -->
+    <string name="title_cant_be_empty">Title can\'t be empty</string>
+    <string name="amount_cant_be_empty">Amount can\'t be empty</string>
+    <string name="amount_should_be_bigger_than_zero">Amount should be bigger than zero</string>
+    <string name="transaction_type_cant_be_empty">Transaction type can\'t be empty</string>
+    <string name="category_cant_be_empty">Category can\'t be empty</string>
+    <string name="Date_cant_be_empty">Date can\'t be empty</string>
+
+
     <string-array name="transaction_types">
         <item>Income</item>
         <item>Expense</item>

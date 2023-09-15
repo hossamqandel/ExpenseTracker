@@ -9,7 +9,7 @@ data class TransactionEntity(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo("id")
-    val id: Int,
+    val id: Int? = null,
 
     @ColumnInfo("title")
     val title: String,
@@ -24,7 +24,7 @@ data class TransactionEntity(
     val category: String,
 
     @ColumnInfo("date")
-    val date: String,
+    val date: Long,
 
     @ColumnInfo("note")
     val note: String?,

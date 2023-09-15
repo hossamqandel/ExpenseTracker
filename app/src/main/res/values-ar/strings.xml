@@ -37,4 +37,17 @@
     <string name="edit">تعديل</string>
     <string name="save">حفظ</string>
 
+    <string name="set_time">Set Time</string>
+
+    <string name="transaction_has_been_added_successfully">تمت إضافة المعاملة بنجاح</string>
+
+    <!--  Validation error messages  -->
+    <string name="title_cant_be_empty">لا يمكن أن يكون العنوان فارغًا</string>
+    <string name="amount_cant_be_empty">لا يمكن أن يكون المبلغ فارغًا</string>
+    <string name="amount_should_be_bigger_than_zero">يجب أن يكون المبلغ أكبر من الصفر</string>
+    <string name="transaction_type_cant_be_empty">لا يمكن أن يكون نوع المعاملة فارغًا</string>
+    <string name="category_cant_be_empty">لا يمكن أن تكون الفئة فارغة</string>
+    <string name="Date_cant_be_empty">لا يمكن أن يكون التاريخ فارغًا</string>
+
+
 </resources>

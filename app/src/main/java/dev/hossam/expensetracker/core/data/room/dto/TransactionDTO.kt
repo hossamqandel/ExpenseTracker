@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class TransactionDTO(
 
     @SerializedName("id")
-    val id: Int,
+    val id: Int? = null,
 
     @SerializedName("title")
     val title: String,
@@ -20,7 +20,7 @@ data class TransactionDTO(
     val category: String,
 
     @SerializedName("date")
-    val date: String,
+    val date: Long,
 
     @SerializedName("note")
     val note: String?,

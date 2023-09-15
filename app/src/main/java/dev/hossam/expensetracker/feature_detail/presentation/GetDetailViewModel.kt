@@ -35,7 +35,7 @@ class GetDetailViewModel @Inject constructor(
                 amount = amount,
                 type = type,
                 category = category,
-                date = date,
+                date = date.toString(),
                 note = note
             )
         }
