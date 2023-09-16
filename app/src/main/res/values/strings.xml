@@ -43,7 +43,7 @@
 
     <string name="transaction_has_been_added_successfully">Transaction has been added successfully</string>
 
-<!--  Validation error messages  -->
+    <!--  Validation error messages  -->
     <string name="title_cant_be_empty">Title can\'t be empty</string>
     <string name="amount_cant_be_empty">Amount can\'t be empty</string>
     <string name="amount_should_be_bigger_than_zero">Amount should be bigger than zero</string>
