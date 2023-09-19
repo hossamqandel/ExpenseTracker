@@ -8,7 +8,7 @@ import dagger.hilt.android.scopes.ViewModelScoped
 import dev.hossam.expensetracker.feature_add_transaction.data.repository.AddTransactionRepositoryImpl
 import dev.hossam.expensetracker.feature_add_transaction.domain.repository.AddTransactionRepository
 import dev.hossam.expensetracker.feature_balancies.data.repository.BalanciesRepositoryImpl
-import dev.hossam.expensetracker.feature_balancies.domain.BalanciesRepository
+import dev.hossam.expensetracker.feature_balancies.domain.repository.BalanciesRepository
 import dev.hossam.expensetracker.feature_detail.data.repository.TransactionDetailRepositoryImpl
 import dev.hossam.expensetracker.feature_detail.domain.repository.TransactionDetailRepository
 

@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 interface BalanciesDao {
 
     @Query("SELECT SUM(amount) FROM TransactionEntity WHERE type = :type")
-    suspend fun sumAllTransactionsByType(type: String): Int?
+    suspend fun sumAllTransactionsByType(type: String): Double?
 
     @Query("SELECT * FROM TransactionEntity ORDER BY date DESC LIMIT :limit")
     fun getLimitedRecentlyTransactions(limit: Int): Flow<List<TransactionEntity>>

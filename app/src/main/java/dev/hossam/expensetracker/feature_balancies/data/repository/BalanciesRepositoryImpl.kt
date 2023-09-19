@@ -6,7 +6,7 @@ import dev.hossam.expensetracker.core.data.room.entities.TransactionMapper
 import dev.hossam.expensetracker.core.enums.TransactionTypeEnum.EXPENSE
 import dev.hossam.expensetracker.core.enums.TransactionTypeEnum.INCOME
 import dev.hossam.expensetracker.feature_balancies.data.local.BalanciesDao
-import dev.hossam.expensetracker.feature_balancies.domain.BalanciesRepository
+import dev.hossam.expensetracker.feature_balancies.domain.repository.BalanciesRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -16,18 +16,18 @@ class BalanciesRepositoryImpl @Inject constructor(
     private val balanciesDao: BalanciesDao,
 ) : BalanciesRepository {
 
-    override suspend fun getUserBalance(): Int {
-        val incomeBalance = balanciesDao.sumAllTransactionsByType(INCOME.value) ?: 0
-        val expenseBalance = balanciesDao.sumAllTransactionsByType(EXPENSE.value) ?: 0
+    override suspend fun getUserBalance(): Double {
+        val incomeBalance = balanciesDao.sumAllTransactionsByType(INCOME.value) ?: 0.0
+        val expenseBalance = balanciesDao.sumAllTransactionsByType(EXPENSE.value) ?: 0.0
         return incomeBalance - expenseBalance
     }
 
-    override suspend fun getSumOfAllIncomeTransactions(): Int {
-        return balanciesDao.sumAllTransactionsByType(INCOME.value) ?: 0
+    override suspend fun getSumOfAllIncomeTransactions(): Double {
+        return balanciesDao.sumAllTransactionsByType(INCOME.value) ?: 0.0
     }
 
-    override suspend fun getSumOfAllExpenseTransactions(): Int {
-        return balanciesDao.sumAllTransactionsByType(EXPENSE.value) ?: 0
+    override suspend fun getSumOfAllExpenseTransactions(): Double {
+        return balanciesDao.sumAllTransactionsByType(EXPENSE.value) ?: 0.0
     }
 
     override fun getRecentlyTransactions(limit: Int): Flow<List<TransactionDTO>> {

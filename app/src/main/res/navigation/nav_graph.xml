@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/addTransactionFragment">
+    app:startDestination="@id/balanciesFragment">
     <fragment
         android:id="@+id/detailFragment"
         android:name="dev.hossam.expensetracker.feature_detail.presentation.DetailFragment"
@@ -14,4 +14,9 @@
         android:name="dev.hossam.expensetracker.feature_add_transaction.presentation.AddTransactionFragment"
         android:label="fragment_add_transaction"
         tools:layout="@layout/fragment_add_transaction" />
+    <fragment
+        android:id="@+id/balanciesFragment"
+        android:name="dev.hossam.expensetracker.feature_balancies.presentation.BalanciesFragment"
+        android:label="fragment_balancies"
+        tools:layout="@layout/fragment_balancies" />
 </navigation>

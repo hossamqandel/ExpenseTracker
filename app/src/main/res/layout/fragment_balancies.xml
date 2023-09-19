@@ -27,11 +27,11 @@
         android:layout_height="@dimen/_80sdp"
         android:layout_marginStart="@dimen/_4sdp"
         android:layout_marginTop="@dimen/_12sdp"
-        app:strokeWidth="0dp"
         android:backgroundTint="@color/on_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/layout_AmountTemplate">
+        app:layout_constraintTop_toBottomOf="@+id/layout_AmountTemplate"
+        app:strokeWidth="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -53,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/total_expense"
+                android:textColor="@color/text_subject"
                 app:layout_constraintBottom_toTopOf="@+id/tv_ExpenseAmount"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -77,11 +78,11 @@
         android:layout_height="@dimen/_80sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_4sdp"
-        app:strokeWidth="0dp"
         android:backgroundTint="@color/on_primary"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_AmountTemplate">
+        app:layout_constraintTop_toBottomOf="@+id/layout_AmountTemplate"
+        app:strokeWidth="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -102,7 +103,8 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/total_expense"
+                android:text="@string/total_income"
+                android:textColor="@color/text_subject"
                 app:layout_constraintBottom_toTopOf="@+id/tv_IncomeAmount"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -111,11 +113,11 @@
                 android:id="@+id/tv_IncomeAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
-                android:textSize="@dimen/_14ssp"
-                android:textStyle="bold"
                 tools:text="$23,000" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -123,12 +125,12 @@
 
     <include
         android:id="@+id/layout_RecyclerTransactionsTemplate"
+        layout="@layout/recycler_transactions_template"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView_Income"
-        layout="@layout/recycler_transactions_template"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView_Income" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
