@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/_18sdp">
+    android:padding="@dimen/_12sdp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/frameLayout"
@@ -28,18 +28,22 @@
 
     <TextView
         android:id="@+id/tv_TransactionTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv_TransactionType"
+        app:layout_constraintBottom_toTopOf="@+id/tv_TransactionCategory"
+        app:layout_constraintEnd_toStartOf="@+id/tv_TransactionAmount"
         app:layout_constraintStart_toEndOf="@+id/frameLayout"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Cash back offer" />
 
     <TextView
-        android:id="@+id/tv_TransactionType"
+        android:id="@+id/tv_TransactionCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_6sdp"
@@ -54,6 +58,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text_balance"
         android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_TransactionTitle"
         tools:text="30$" />
@@ -64,6 +69,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text_balance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_TransactionType"
+        app:layout_constraintTop_toTopOf="@+id/tv_TransactionCategory"
         tools:text="20 Aug 2023" />
 </androidx.constraintlayout.widget.ConstraintLayout>
