@@ -85,4 +85,6 @@ dependencies {
     val coroutinesVersion = "1.7.3"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
+    //Draw background color and icon when swip recycler Item
+    implementation("it.xabaras.android:recyclerview-swipedecorator:1.4")
 }

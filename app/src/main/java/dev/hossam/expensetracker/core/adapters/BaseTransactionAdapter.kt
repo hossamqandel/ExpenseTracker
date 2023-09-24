@@ -33,5 +33,8 @@ class BaseTransactionAdapter : RecyclerView.Adapter<BaseTransactionVH>() {
 
     override fun getItemCount(): Int = data.size
 
+    fun getTransactionItem(position: Int): TransactionDTO?{
+        return data[position]
+    }
 
 }

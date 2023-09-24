@@ -41,6 +41,9 @@
 
     <string name="transaction_has_been_added_successfully">تمت إضافة المعاملة بنجاح</string>
 
+    <string name="undo">استعاده</string>
+    <string name="transaction_has_been_successfully_restored">تمت استعادة المعاملة بنجاح</string>
+
     <!--  Validation error messages  -->
     <string name="title_cant_be_empty">لا يمكن أن يكون العنوان فارغًا</string>
     <string name="amount_cant_be_empty">لا يمكن أن يكون المبلغ فارغًا</string>

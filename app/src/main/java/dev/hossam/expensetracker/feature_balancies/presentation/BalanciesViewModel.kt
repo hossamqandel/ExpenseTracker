@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.hossam.expensetracker.feature_balancies.domain.repository.BalanciesRepository
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -14,6 +15,7 @@ class BalanciesViewModel @Inject constructor(
     private val repo: BalanciesRepository
 ) : ViewModel() {
 
+    private var balanceJob: Job? = null
     private val _state = MutableStateFlow(BalanciesState())
     val state = _state.asStateFlow()
 
@@ -21,15 +23,18 @@ class BalanciesViewModel @Inject constructor(
         getAllBalancies()
     }
 
-    private fun getAllBalancies() = viewModelScope.launch {
-        val totalBalance = repo.getUserBalance()
-        val totalIncome = repo.getSumOfAllIncomeTransactions()
-        val totalExpense = repo.getSumOfAllExpenseTransactions()
-        _state.value = state.value.copy(
-            totalBalance = totalBalance,
-            totalIncome = totalIncome,
-            totalExpense = totalExpense
-        )
+    fun getAllBalancies() {
+        balanceJob?.cancel()
+        balanceJob = viewModelScope.launch {
+            val totalIncome = repo.getSumOfAllIncomeTransactions()
+            val totalExpense = repo.getSumOfAllExpenseTransactions()
+            val totalBalance = repo.getUserBalance()
+            _state.value = state.value.copy(
+                totalBalance = totalBalance,
+                totalIncome = totalIncome,
+                totalExpense = totalExpense
+            )
+        }
     }
 
 }

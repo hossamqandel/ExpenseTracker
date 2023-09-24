@@ -51,6 +51,11 @@
     <string name="category_cant_be_empty">Category can\'t be empty</string>
     <string name="Date_cant_be_empty">Date can\'t be empty</string>
 
+    <string name="undo">Undo</string>
+    <string name="transaction_has_been_successfully_restored">
+        Transaction has been successfully restored
+    </string>
+
 
     <string-array name="transaction_types">
         <item>Income</item>
