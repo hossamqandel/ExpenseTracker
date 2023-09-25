@@ -7,6 +7,7 @@ import dev.hossam.expensetracker.core.data.room.entities.TransactionEntity
 import dev.hossam.expensetracker.feature_add_transaction.data.local.AddTransactionDao
 import dev.hossam.expensetracker.feature_balancies.data.local.BalanciesDao
 import dev.hossam.expensetracker.feature_detail.data.local.TransactionDetailDao
+import dev.hossam.expensetracker.feature_transactions.data.local.TransactionsDao
 
 @Database(
     entities = [TransactionEntity::class],
@@ -19,5 +20,6 @@ abstract class ExpenseTrackerDatabase : RoomDatabase() {
     abstract fun addTransactionDao(): AddTransactionDao
     abstract fun baseTransactionDao(): BaseTransactionDao
     abstract fun balanciesDao(): BalanciesDao
+    abstract fun transactionsDao(): TransactionsDao
 
 }

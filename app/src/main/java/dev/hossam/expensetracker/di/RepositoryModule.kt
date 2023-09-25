@@ -11,6 +11,8 @@ import dev.hossam.expensetracker.feature_balancies.data.repository.BalanciesRepo
 import dev.hossam.expensetracker.feature_balancies.domain.repository.BalanciesRepository
 import dev.hossam.expensetracker.feature_detail.data.repository.TransactionDetailRepositoryImpl
 import dev.hossam.expensetracker.feature_detail.domain.repository.TransactionDetailRepository
+import dev.hossam.expensetracker.feature_transactions.data.repository.TransactionsRepositoryImpl
+import dev.hossam.expensetracker.feature_transactions.domain.repository.TransactionsRepository
 
 @Module
 @InstallIn(ViewModelComponent::class)
@@ -33,5 +35,11 @@ abstract class RepositoryModule {
     abstract fun bindABalanciesRepo(
         repo: BalanciesRepositoryImpl
     ): BalanciesRepository
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindTransactionsRepo(
+        repo: TransactionsRepositoryImpl
+    ): TransactionsRepository
 
 }
